@@ -11,8 +11,6 @@ import java.util.concurrent.*;
  */
 
 /**
- * 著作权归https://pdai.tech所有。
- * 链接：https://www.pdai.tech/md/java/thread/java-thread-x-juc-executor-FutureTask.html
  *
  * cancel():cancel()方法用来取消异步任务的执行。如果异步任务已经完成或者已经被取消，或者由于某些原因不能取消，
  * 则会返回false。如果任务还没有被执行，则会返回true并且异步任务不会被执行。如果任务已经开始执行了但是还没有执行完成，

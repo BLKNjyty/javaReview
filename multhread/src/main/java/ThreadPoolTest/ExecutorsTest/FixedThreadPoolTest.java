@@ -22,7 +22,9 @@ public class FixedThreadPoolTest {
             Runnable worker = new WorkerThread1("" + i);
             executor.execute(worker);
         }
-        executor.shutdown(); // This will make the executor accept no new threads and finish all existing threads in the queue
+        //shutdown()方法关闭线程池的时候，它会等待正在执行的任务先完成，然后再关闭
+        //shutdownNow()会立刻停止正在执行的任务，awaitTermination()则会等待指定的时间让线程池关闭。
+        executor.shutdown();
         while (!executor.isTerminated()) { // Wait until all threads are finish,and also you can use "executor.awaitTermination();" to wait
         }
         System.out.println("Finished all threads");

@@ -11,6 +11,11 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Author yu.jin
  * @Date 2022-07-20 10:21
  */
+
+/**
+ * synchronized关键字用于加锁，但这种锁一是很重，二是获取时必须一直等待，没有额外的尝试机制
+ *
+ */
 public class TaskQueue3 {
     private final Lock  lock=new ReentrantLock();
     private  final Condition condition=lock.newCondition();
