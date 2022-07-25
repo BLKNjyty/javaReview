@@ -20,7 +20,9 @@ public class ByteArrayOutputStreamDemo {
             output.write("Hello ".getBytes("UTF-8"));
             output.write("world!".getBytes("UTF-8"));
             data = output.toByteArray();
+
         }
+
         System.out.println(new String(data, "UTF-8"));
     }
 }
